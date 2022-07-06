@@ -1,3 +1,3 @@
-# 347S, Eats. 
+# 347s, Eats. 
 
 ## Recipe repository
