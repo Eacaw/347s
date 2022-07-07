@@ -25,12 +25,11 @@ const Navbar = () => {
   const [photoURL, setPhotoURL] = useState("");
   const [logout, setLogout] = useState(null);
 
-  const pages = ["Dashboard", "Ranks"];
-  const settings = [userName, "Profile", "Quizes", "Logout"];
+  const pages = ["Feed"];
+  const settings = [userName, "Profile", "Logout"];
 
   const settingsIcons = {
     Profile: <CgProfile />,
-    Quizes: <MdOutlineQuiz />,
     Logout: <HiOutlineLogout />,
   };
 
@@ -85,8 +84,8 @@ const Navbar = () => {
     if (setting === "Login") {
       return "/login";
     }
-    if (setting === "Quizes") {
-      return "/quizes";
+    if (setting === "Feed") {
+      return "/feed";
     }
     return "/";
   }
@@ -134,8 +133,10 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page}>
+                  <Button variant="text" href={getHrefForSettingsMenu(page)}>
+                    {page}
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
