@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Feed from "./Pages/Feed";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
+          <Route path="/" exact element={<Feed />} />
           <Route path="/feed" exact element={<Feed />} />
         </Routes>
       </BrowserRouter>
