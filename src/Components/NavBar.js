@@ -25,7 +25,7 @@ const Navbar = () => {
   const [photoURL, setPhotoURL] = useState("");
   const [logout, setLogout] = useState(null);
 
-  const pages = ["Feed"];
+  const pages = ["Feed", "Add Recipe", "Profile"];
   const settings = [userName, "Profile", "Logout"];
 
   const settingsIcons = {
@@ -86,6 +86,9 @@ const Navbar = () => {
     }
     if (setting === "Feed") {
       return "/feed";
+    }
+    if (setting === "Add Recipe") {
+      return "/recipe";
     }
     return "/";
   }
@@ -155,6 +158,8 @@ const Navbar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
+                variant="text"
+                href={getHrefForSettingsMenu(page)}
               >
                 {page}
               </Button>
