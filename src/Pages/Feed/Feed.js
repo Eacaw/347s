@@ -1,11 +1,5 @@
-import {
-  collection,
-  getFirestore,
-  orderBy,
-  query,
-  where,
-} from "firebase/firestore";
-import React, { useEffect, useState } from "react";
+import { collection, getFirestore, orderBy, query } from "firebase/firestore";
+import React from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import MobileRecipeCard from "./Components/MobileRecipeCard";
 
@@ -20,9 +14,12 @@ function Feed() {
     <div className="flex-center top-padding-navbar">
       <div className="center-align-question-cards">
         {recipeObjects &&
-          recipeObjects.slice(0).map((recipeObj) => {
+          recipeObjects.slice(0).map((recipeObj, idx) => {
             return recipeObj ? (
-              <MobileRecipeCard key={recipeObj.uid} recipeData={recipeObj} />
+              <MobileRecipeCard
+                key={recipeObj.Title + idx}
+                recipeData={recipeObj}
+              />
             ) : null;
           })}
       </div>

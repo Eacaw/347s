@@ -1,10 +1,10 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/NavBar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Feed, Profile, RecipeForm, Login } from "./Pages/Pages";
+import { Feed, Login, Profile, RecipeForm } from "./Pages/Pages";
 
-import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
 
 function App() {
   // TODO: Add SDKs for Firebase products that you want to use

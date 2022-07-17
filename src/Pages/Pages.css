@@ -13,13 +13,9 @@
 }
 
 .recipe-card {
-  background-color: #fff;
   border-radius: 50px;
 }
 
-.rounded-corners {
-  border-radius: 50px;
-}
 
 .center-align-question-cards {
   display: grid;
