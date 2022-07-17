@@ -33,13 +33,13 @@ const Login = () => {
         ? userDoc.data().lastLogin
         : serverTimestamp(),
       lastLogin: serverTimestamp(),
-      quizesPlayed: [],
+      contributions: [],
       isAdmin: userDoc.data() ? userDoc.data().isAdmin : false,
     });
-    moveToDashboard();
+    moveToFeed();
   }
 
-  function moveToDashboard() {
+  function moveToFeed() {
     window.location.href = "/feed";
   }
 

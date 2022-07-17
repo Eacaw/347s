@@ -19,17 +19,22 @@
 
 .center-align-question-cards {
   display: grid;
-  grid-template-columns: 390px 390px 390px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #ECEFF1;
+
 }
 
 @media screen and (max-width: 1200px) {
   .center-align-question-cards {
-      grid-template-columns: 390px 390px;
+      grid-template-columns: 1fr 1fr;
+      background-color: #ECEFF1;
   }
 }
 
 @media screen and (max-width: 800px) {
   .center-align-question-cards {
-      grid-template-columns: 390px;
+      grid-template-columns: 1fr;
+      background-color: #ECEFF1;
+
   }
 }
