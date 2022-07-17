@@ -16,10 +16,7 @@ function MobileRecipeCard(props) {
   }, [props.recipeData]);
 
   return (
-    <Card
-      sx={{ minWidth: 345, maxWidth: 390, borderRadius: 5 }}
-      className="rounded-top-corners"
-    >
+    <Card sx={{ minWidth: 300, maxWidth: 345, borderRadius: 5 }} elevation={5}>
       <CardActionArea>
         <CardMedia
           component="img"
