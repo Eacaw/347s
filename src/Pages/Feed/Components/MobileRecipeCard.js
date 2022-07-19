@@ -19,7 +19,7 @@ function MobileRecipeCard(props) {
     <Card sx={{ minWidth: 300, maxWidth: 345, borderRadius: 5 }} elevation={5}>
       <CardActionArea>
         <CardMedia
-          component="img"
+          componentx="img"
           height="250"
           image={recipeData.Images[0]}
           referrerPolicy="no-referrer"
