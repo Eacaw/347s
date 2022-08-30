@@ -1,50 +1,30 @@
 {
-  "name": "347s",
+  "name": "foundry-blog",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.8.7",
-    "@mui/styled-engine-sc": "^5.8.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.8.4",
-    "mui": "^0.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-firebase-hooks": "^5.0.3",
-    "react-icons": "^4.4.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && firebase deploy"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "debounce": "^1.2.1",
+    "firebase": "^9.9.3",
+    "from": "^0.1.7",
+    "import": "^0.0.6",
+    "lodash.debounce": "^4.0.8",
+    "lodash.kebabcase": "^4.1.1",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.0.3",
+    "react-hook-form": "^7.34.2",
+    "react-hot-toast": "^2.3.0",
+    "react-markdown": "^8.0.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
   }
 }
