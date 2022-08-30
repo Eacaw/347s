@@ -11,6 +11,7 @@ export default function SignOutButton() {
           signOut(auth);
         }, 250);
       }}
+      href="/"
     >
       Sign out
     </button>
