@@ -24,9 +24,6 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <SignOutButton />
-            </li>
-            <li>
               <Link href={`/${username}`}>
                 <img src={user?.photoURL} />
               </Link>
