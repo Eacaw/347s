@@ -43,7 +43,7 @@ function PostList() {
 
   return (
     <>
-      <h1>Manage your Posts</h1>
+      <h1>Manage your Posts:</h1>
       <PostFeed posts={posts} admin />
     </>
   );
@@ -88,19 +88,22 @@ function CreateNewPost() {
   };
 
   return (
-    <form onSubmit={createPost}>
-      <input
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="My Awesome Article!"
-        className={styles.input}
-      />
-      <p>
-        <strong>Slug:</strong> {slug}
-      </p>
-      <button type="submit" disabled={!isValid} className="btn-green">
-        Create New Post
-      </button>
-    </form>
+    <>
+      <h2>Add new recipe:</h2>
+      <form onSubmit={createPost}>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Add a title..."
+          className={styles.input}
+        />
+        <p>
+          <strong>Slug:</strong> {slug}
+        </p>
+        <button type="submit" disabled={!isValid} className="btn-green">
+          Create New Recipe
+        </button>
+      </form>
+    </>
   );
 }
