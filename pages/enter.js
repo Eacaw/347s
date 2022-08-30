@@ -7,6 +7,9 @@ import { doc, getDoc, writeBatch } from "firebase/firestore";
 import SignOutButton from "../components/SignOut";
 import Image from "next/image";
 
+const logoHeight = "50vh";
+const logoWidth = "50vw";
+
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
 
@@ -21,6 +24,7 @@ export default function Enter(props) {
       ) : (
         <>
           <GoogleSignInButton />
+          <br />
           <FacebookSignInButton />
         </>
       )}
@@ -35,8 +39,8 @@ function GoogleSignInButton() {
   };
 
   return (
-    <button className="btn-google" onClick={signInWithGoogle}>
-      <Image src={"/google.png"} layout="fill" /> Sign in with Google
+    <button className="btn-google push-center" onClick={signInWithGoogle}>
+      <img src={"/google.png"} /> <p>Sign in with Google</p>
     </button>
   );
 }
@@ -48,8 +52,8 @@ function FacebookSignInButton() {
   };
 
   return (
-    <button className="btn-google" onClick={signInWithFacebook}>
-      <Image src={"/facebook.png"} /> Sign in with Facebook
+    <button className="btn-google push-center" onClick={signInWithFacebook}>
+      <img src={"/facebook.png"} /> <p>Sign in with Facebook</p>
     </button>
   );
 }

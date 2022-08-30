@@ -276,6 +276,22 @@ input[type="file"] {
   margin-left: auto;
 }
 
+.push-right {
+  margin-right: auto;
+}
+
+.push-top {
+  margin-top: auto;
+}
+
+.push-bottom {
+  margin-bottom: auto;
+}
+
+.push-center {
+  margin: auto;
+}
+
 .text-sm {
   font-size: 0.85rem;
 }
