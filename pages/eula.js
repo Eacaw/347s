@@ -1,21 +1,21 @@
-import React from "react";
+import React from react;
 
 export default function Eula() {
   return (
     <main>
       <h1>End User License Agreement</h1>
       <p>
-        This End User License Agreement ("EULA") is a legal agreement between
+        This End User License Agreement (EULA) is a legal agreement between
         you and 347s. This EULA agreement governs your acquisition and use of
-        our software ("Software") directly from 347s or indirectly through a
-        manufacturer ("Manufacturer") of the Software.
+        our software (Software) directly from 347s or indirectly through a
+        manufacturer (Manufacturer) of the Software.
       </p>
       <p>
         Please read this EULA agreement carefully before completing the
         installation process and using the Software. It provides a license to
         use the Software and contains warranty information and liability
         disclaimers. If you register for a free trial of the Software, this EULA
-        agreement will also govern that trial. By clicking "accept" or
+        agreement will also govern that trial. By clicking accept or
         installing and/or using the Software, you are confirming your acceptance
         of the Software license and agreeing to become bound by the terms of
         this EULA agreement. If you are entering into this EULA agreement on
