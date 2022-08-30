@@ -12,7 +12,7 @@ export default function Navbar() {
       <ul>
         <li>
           <Link href="/">
-            <button className="btn-logo">Foundry21</button>
+            <button className="btn-logo">347s</button>
           </Link>
         </li>
         {/*User has signed in and has a username*/}

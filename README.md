@@ -1,8 +1,8 @@
-# Foundry Features Blog site
+# 347s Features Blog site
 
 ## Blog site:
 
-This blog site will be used as a place for the team to announce and gather feedback from the community on new and upcoming features for the primary foundry product[^1]. 
+This blog site will be used as a place for the team to announce and gather feedback from the community on new and upcoming features for the primary 347s product[^1]. 
 
 ## Setup
 
