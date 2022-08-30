@@ -72,6 +72,21 @@ export default function Home(props) {
 
   return (
     <main>
+      <Metatags />
+
+      <div className="card card-info">
+        <h2>Welcome to 347s</h2>
+        <p>
+          347s is a small recipe repository, where you can share your recipes
+          with the world. You can also find recipes from other users, give your
+          favourite recipes a little heart ❤️ and more! (coming soon)
+        </p>
+        <p>
+          Sign up for an account using either google or facebook to add your own
+          recipes and add hearts to other recipes.
+        </p>
+      </div>
+
       <PostFeed posts={posts} />
 
       {!loading && !postsEnd && (
