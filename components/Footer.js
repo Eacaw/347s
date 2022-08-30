@@ -11,11 +11,6 @@ export default function Footer() {
   return (
     <nav className="footer">
       <ul>
-        <li>
-          <Link href="/">
-            <button className="btn-logo">347s</button>
-          </Link>
-        </li>
         {/*User has signed in and has a username*/}
         {username && (
           <>
@@ -37,7 +32,7 @@ export default function Footer() {
         {!username && (
           <li className="push-left">
             <Link href="/enter">
-              <button className="btn-blue">Login</button>
+              <button className="btn-blue">Sign up/Login</button>
             </Link>
           </li>
         )}
