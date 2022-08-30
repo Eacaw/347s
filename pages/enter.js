@@ -5,6 +5,7 @@ import { UserContext } from "../lib/context";
 import debounce from "lodash.debounce";
 import { doc, getDoc, writeBatch } from "firebase/firestore";
 import SignOutButton from "../components/SignOut";
+import Image from "next/image";
 
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
@@ -35,7 +36,7 @@ function GoogleSignInButton() {
 
   return (
     <button className="btn-google" onClick={signInWithGoogle}>
-      <img src={"/google.png"} /> Sign in with Google
+      <Image src={"/google.png"} layout="fill" /> Sign in with Google
     </button>
   );
 }
@@ -48,7 +49,7 @@ function FacebookSignInButton() {
 
   return (
     <button className="btn-google" onClick={signInWithFacebook}>
-      <img src={"/facebook.png"} /> Sign in with Facebook
+      <Image src={"/facebook.png"} /> Sign in with Facebook
     </button>
   );
 }

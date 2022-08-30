@@ -3,6 +3,7 @@ import React from "react";
 import { useContext } from "react";
 import { UserContext } from "../lib/context";
 import SignOutButton from "../components/SignOut";
+import Image from "next/image";
 
 export default function Navbar() {
   const { user, username } = useContext(UserContext);
@@ -25,7 +26,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <img src={user?.photoURL} />
+                <Image src={user?.photoURL} height={60} width={60} />
               </Link>
             </li>
           </>
