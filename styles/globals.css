@@ -17,6 +17,7 @@ body {
   color: var(--color-text);
   margin-top: 50px;
   position: relative;
+  min-height: 100vh;
 }
 
 
@@ -105,7 +106,7 @@ code {
   width: 100%;
   background: rgb(54, 54, 54);
   color: var(--colors-text);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   padding: 0 10vw;
   font-weight: bold;
