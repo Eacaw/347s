@@ -1,5 +1,5 @@
 import { auth, googleAuthProvider, firestore } from "../lib/firebase";
-import { signInWithPopup, signOut } from "firebase/auth";
+import { signInWithPopup, signOut, FacebookAuthProvider } from "firebase/auth";
 import { useCallback, useContext, useEffect, useState } from "react";
 import { UserContext } from "../lib/context";
 import debounce from "lodash.debounce";
@@ -18,14 +18,17 @@ export default function Enter(props) {
           <SignOutButton />
         )
       ) : (
-        <SignInButton />
+        <>
+          <GoogleSignInButton />
+          <FacebookSignInButton />
+        </>
       )}
     </main>
   );
 }
 
 // Sign in with Google button
-function SignInButton() {
+function GoogleSignInButton() {
   const signInWithGoogle = async () => {
     return signInWithPopup(auth, googleAuthProvider);
   };
@@ -33,6 +36,19 @@ function SignInButton() {
   return (
     <button className="btn-google" onClick={signInWithGoogle}>
       <img src={"/google.png"} /> Sign in with Google
+    </button>
+  );
+}
+
+// Sign in with Facebook button
+function FacebookSignInButton() {
+  const signInWithFacebook = async () => {
+    return signInWithPopup(auth, new FacebookAuthProvider());
+  };
+
+  return (
+    <button className="btn-google" onClick={signInWithFacebook}>
+      <img src={"/facebook.png"} /> Sign in with Facebook
     </button>
   );
 }
