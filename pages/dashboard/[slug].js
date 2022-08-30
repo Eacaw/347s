@@ -15,7 +15,15 @@ import ReactMarkdown from "react-markdown";
 
 export default function DashboardPostManager() {
   return (
-    <AuthCheck>
+    <AuthCheck
+      fallback={
+        <main>
+          <Link passHref href="/">
+            <button>Home</button>
+          </Link>
+        </main>
+      }
+    >
       <PostManager />
     </AuthCheck>
   );
