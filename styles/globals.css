@@ -232,8 +232,26 @@ button.btn-logo {
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.01);
+  transform: translateY(-5px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Static Cards */
+.static-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.static-card p {
+  margin: 0;
+  font-size: .75rem;
 }
 
 
@@ -268,6 +286,33 @@ button.btn-logo {
 .card-info {
   color: white;
   background: var(--color-blue);
+}
+
+/* Image thumbnails */
+/* thumbnail card */
+.thumbnail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.thumbnail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
 }
 
 /* Grid */
