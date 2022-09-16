@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth, storage, STATE_CHANGED } from "../lib/firebase";
 import Loader from "./Loader";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { addDoc, collection } from "firebase/firestore";
 
 // Uploads images to Firebase Storage
-export default function ImageUploader() {
+export default function ImageUploader({ postRef }) {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [downloadURL, setDownloadURL] = useState(null);
+
+  // Add a reference to the uploaded file on the post document's images collection
+  useEffect(() => {
+    if (downloadURL) {
+      const imageCollectionRef = collection(postRef, "images");
+      addDoc(imageCollectionRef, { src: downloadURL });
+      // Reset the upload state
+      setDownloadURL(null);
+    }
+  }, [downloadURL]);
 
   // Creates a Firebase Upload Task
   const uploadFile = async (e) => {
