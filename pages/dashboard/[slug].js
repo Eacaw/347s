@@ -12,6 +12,7 @@ import { useDocumentData } from "react-firebase-hooks/firestore";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import ReactMarkdown from "react-markdown";
+import ImageUploadSelector from "../../components/ImageUploadSelector";
 
 export default function DashboardPostManager() {
   return (
@@ -68,6 +69,8 @@ function PostManager() {
             <Link passHref href={`/${post.username}/${post.slug}`}>
               <button className="btn-blue">Live view</button>
             </Link>
+            <ImageUploader postRef={postRef} />
+            <ImageUploadSelector postRef={postRef} />
             <DeletePostButton postRef={postRef} />
           </aside>
         </>
@@ -109,8 +112,6 @@ function PostForm({ defaultValues, postRef, preview }) {
       )}
 
       <div className={preview ? styles.hidden : styles.controls}>
-        <ImageUploader postRef={postRef} />
-
         <textarea
           {...register("content", {
             maxLength: { value: 20000, message: "content is too long" },
