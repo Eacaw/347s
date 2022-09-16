@@ -21,15 +21,28 @@ import toast from "react-hot-toast";
 import { firestore } from "../../lib/firebase";
 
 import { recipeTempalate } from "../../components/Constants";
+import SignOutButton from "../../components/SignOut";
 
 export default function Dashboard() {
   return (
     <main>
       <AuthCheck>
+        <UserManager />
         <PostList />
         <CreateNewPost />
       </AuthCheck>
     </main>
+  );
+}
+
+function UserManager() {
+  const { user, username } = useContext(UserContext);
+
+  return (
+    <>
+      <h2> Welcome {username} </h2>
+      {username && <SignOutButton />}
+    </>
   );
 }
 
