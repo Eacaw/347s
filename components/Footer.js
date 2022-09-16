@@ -9,7 +9,7 @@ export default function Footer() {
   const { user, username } = useContext(UserContext);
 
   return (
-    <nav className="footer">
+    <footer className="footer">
       <ul>
         {/*User has signed in and has a username*/}
         {username && (
@@ -50,6 +50,6 @@ export default function Footer() {
 
         <li></li>
       </ul>
-    </nav>
+    </footer>
   );
 }

@@ -15,6 +15,7 @@ import {
 
 import { useState } from "react";
 import Metatags from "../components/Metatags";
+import { BsArrowUp } from "react-icons/bs";
 
 // Max post to query per page
 const LIMIT = 10;
@@ -76,15 +77,6 @@ export default function Home(props) {
 
       <div className="card card-info">
         <h2>Welcome to 347s</h2>
-        <p>
-          347s is a small recipe repository, where you can share your recipes
-          with the world. You can also find recipes from other users, give your
-          favourite recipes a little heart ❤️ and more! (coming soon)
-        </p>
-        <p>
-          Sign up for an account using either google or facebook to add your own
-          recipes and add hearts to other recipes.
-        </p>
       </div>
 
       <PostFeed posts={posts} />
@@ -96,6 +88,9 @@ export default function Home(props) {
       <Loader show={loading} />
 
       {postsEnd && "You have reached the end!"}
+      <button className="btn-transparent" onClick={() => window.scrollTo(0, 0)}>
+        <BsArrowUp />
+      </button>
     </main>
   );
 }
