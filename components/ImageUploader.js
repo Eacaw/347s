@@ -64,7 +64,7 @@ export default function ImageUploader({ postRef }) {
             <input
               type="file"
               onChange={uploadFile}
-              accept="image/x-png,image/gif,image/jpeg"
+              accept="image/png,image/gif,image/jpeg"
             />
           </label>
         </>
