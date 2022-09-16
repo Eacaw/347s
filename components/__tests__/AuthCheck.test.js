@@ -9,9 +9,6 @@ import AuthCheck from "../AuthCheck";
 jest.mock("../../lib/context");
 
 describe("AuthCheck", () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
   it("renders children when logged in", () => {
     // Given
     UserContext._currentValue = { username: "username" };
