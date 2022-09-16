@@ -53,13 +53,13 @@ export default function ImageUploader({ postRef }) {
   };
 
   return (
-    <div className="box">
+    <div className="btn">
       <Loader show={uploading} />
       {uploading && <h3>{progress}%</h3>}
 
       {!uploading && (
         <>
-          <label className="btn">
+          <label className="btn-blue">
             📸 Upload Img
             <input
               type="file"
@@ -68,10 +68,6 @@ export default function ImageUploader({ postRef }) {
             />
           </label>
         </>
-      )}
-
-      {downloadURL && (
-        <code className="upload-snippet">{`![alt](${downloadURL})`}</code>
       )}
     </div>
   );

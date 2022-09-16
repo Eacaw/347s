@@ -29,9 +29,11 @@ export default function ImageUploadSelector({ postRef }) {
   const imageAlt = postRef.path.split("/")[3];
 
   return (
-    <div class="static-card">
+    <div className="static-card">
       <h3>Images:</h3>
-      <p>Click on an image to copy the embed code to add to your recipe.</p>
+      <p>
+        Click on an image to copy the embed code to add to your recipe page.
+      </p>
       {images &&
         images.slice(0).map((image, idx) => {
           return image.src ? (
