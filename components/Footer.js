@@ -14,27 +14,38 @@ export default function Footer() {
         {/*User has signed in and has a username*/}
         {username && (
           <>
-            <li className="push-left">
+            <li className="push-right">
               <Link href={"/"}>
                 <SignOutButton />
               </Link>
             </li>
             <li>
-              <Link href="#page-top">
-                <button className="btn-transparent">
-                  <BsArrowUp />
-                </button>
-              </Link>
+              <button
+                className="btn-transparent"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <BsArrowUp />
+              </button>
             </li>
           </>
         )}
         {/*User has not signed OR and has no username*/}
         {!username && (
-          <li className="push-left">
-            <Link href="/enter">
-              <button className="btn-blue">Sign up/Login</button>
-            </Link>
-          </li>
+          <>
+            <li className="push-right">
+              <Link href="/enter">
+                <button className="btn-blue">Sign up/Login</button>
+              </Link>
+            </li>
+            <li>
+              <button
+                className="btn-transparent"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <BsArrowUp />
+              </button>
+            </li>
+          </>
         )}
 
         <li></li>
