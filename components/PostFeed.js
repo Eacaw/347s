@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function PostFeed({ posts, admin = false }) {
   return posts && posts.length ? (
-    <>
+    <div className="grid">
       {posts.map((post, i) => (
         <PostItem post={post} key={i} admin={admin} />
       ))}
-    </>
+    </div>
   ) : (
     <></>
   );
@@ -17,27 +17,35 @@ function PostItem({ post, admin }) {
   const wordCount = post?.content.trim().split(/\s+/g).length;
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
+  // Return a simple card showcasing all post
+  // data
   return (
     <div className="card">
-      <Link href={`/${post.username}`}>
-        <a>
-          <strong>By @{post.username}</strong>
-        </a>
-      </Link>
-
-      <Link passHref href={`/${post.username}/${post.slug}`}>
-        <h2>
-          <a>{post.title}</a>
-        </h2>
-      </Link>
-
+      <a href={`/${post.username}/${post.slug}`}>
+        <img
+          src={post?.coverImage ? post?.coverImage : "/ComingSoon.png"}
+          alt={post?.title}
+        />
+      </a>
+      <div>
+        <Link href={`/${post.username}/${post.slug}`}>
+          <h2>
+            <a>{post.title}</a>
+          </h2>
+        </Link>
+        <Link href={`/${post.username}`}>
+          <a>
+            <strong>By @{post.username}</strong>
+          </a>
+        </Link>
+      </div>
       <footer>
-        <span>
+        <p>
           {wordCount} words. {minutesToRead} min read
-        </span>
-        <span className="push-left">💗 {post.heartCount || 0} Hearts</span>
+        </p>
+        <br />
+        <span className="push-center">❤️ {post.heartCount || 0} Hearts</span>
       </footer>
-
       {/* If admin view, show extra controls for user */}
       {admin && (
         <>

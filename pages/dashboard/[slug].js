@@ -55,7 +55,12 @@ function PostManager() {
             />
           </section>
 
-          <aside>
+          <aside
+            style={{
+              marginTop: "-5rem",
+              marginBottom: "10rem",
+            }}
+          >
             <h3>Tools</h3>
             <button onClick={() => setPreview(!preview)}>
               {preview ? "Edit" : "Preview"}

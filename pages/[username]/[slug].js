@@ -76,7 +76,12 @@ export default function Post(props) {
         <PostContent post={post} />
       </section>
 
-      <aside className="card">
+      <aside
+        style={{
+          marginTop: "-5rem",
+          marginBottom: "10rem",
+        }}
+      >
         <p>
           <strong>{post.heartCount || 0} 💗</strong>
         </p>

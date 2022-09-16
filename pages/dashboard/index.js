@@ -20,6 +20,8 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import toast from "react-hot-toast";
 import { firestore } from "../../lib/firebase";
 
+import { recipeTempalate } from "../../components/Constants";
+
 export default function Dashboard() {
   return (
     <main>
@@ -73,7 +75,7 @@ function CreateNewPost() {
       uid,
       username,
       published: false,
-      content: "# hello world!",
+      content: recipeTempalate,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
       heartCount: 0,

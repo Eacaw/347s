@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --color-bg: #eef0f1;
+  --color-bg: #caedfe;
   --color-text: #08090a;
   --color-blue: #3b49df;
   --color-red: #df3b3b;
@@ -112,6 +112,10 @@ code {
   font-weight: bold;
   border-top: 1px solid var(--color-gray);
   z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
 }
 
 .footer ul {
@@ -164,12 +168,12 @@ code {
 
 
 button:hover {
-  filter: brightness(90%);
+  filter: brightness(70%);
 }
 
 button:disabled,
 button[disabled]{
-  filter: brightness(80%);
+  filter: brightness(60%);
   cursor: not-allowed;
 }
 
@@ -214,31 +218,68 @@ button.btn-logo {
 }
 
 /* Cards */
-
 .card {
-  padding: 2rem;
-  margin: 1rem 0;
-  background-color: white;
-  border: 1px solid var(--color-gray);
-  border-radius: 8px;
-}
-
-.card footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
 }
 
-.card-img-center {
-  width:20%;
-  display:block;
-  margin:auto;
-  border-radius: 50%;
-  max-width: 150px;
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* On small width screen card is full window width */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card .btn {
+  margin: 1rem 0;
 }
 
 .card-info {
   color: white;
   background: var(--color-blue);
 }
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+
 
 /* Loader */
 
@@ -285,7 +326,7 @@ input[type="file"] {
 }
 
 .push-bottom {
-  margin-bottom: auto;
+  margin-bottom: 5rem;
 }
 
 .push-center {
@@ -298,17 +339,17 @@ input[type="file"] {
 
 .text-danger {
   font-weight: bold;
-  color: var(--color-red);
+  color: var(--color-red) !important;
 }
 
 .text-success {
   font-weight: bold;
-  color: var(--color-green);
+  color: var(--color-green) !important;
 }
 
 .text-info {
   font-weight: bold;
-  color: var(--color-blue);
+  color: var(--color-blue) !important;
 }
 
 .box {
