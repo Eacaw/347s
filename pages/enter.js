@@ -6,6 +6,7 @@ import debounce from "lodash.debounce";
 import { doc, getDoc, writeBatch } from "firebase/firestore";
 import SignOutButton from "../components/SignOut";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const logoHeight = "50vh";
 const logoWidth = "50vw";
@@ -59,6 +60,8 @@ function FacebookSignInButton() {
 }
 
 function UsernameForm() {
+  const router = useRouter();
+
   const [formValue, setFormValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -104,7 +107,14 @@ function UsernameForm() {
     }
   };
 
-  //
+  // auto redirect to the home page if the user is signed in and has a username
+  useEffect(() => {
+    if (username) {
+      setTimeout(() => {
+        router.push("/");
+      }, 2500);
+    }
+  }, [username]);
 
   useEffect(() => {
     checkUsername(formValue);

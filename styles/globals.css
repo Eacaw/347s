@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --color-bg: #caedfe;
+  --color-bg: #f1f1f1;
   --color-text: #08090a;
   --color-blue: #3b49df;
-  --color-red: #df3b3b;
+  --color-red: #d4d4d4;
   --color-green: #3bdf72;
   --color-gray: #b5bdc4;
 }
@@ -322,10 +322,7 @@ button.btn-logo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1rem;
-  padding: 1rem;
 }
-
-
 
 /* Loader */
 
