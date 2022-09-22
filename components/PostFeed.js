@@ -21,13 +21,19 @@ function PostItem({ post, admin }) {
   // data
   return (
     <div className="card">
-      <a href={`/${post.username}/${post.slug}`}>
-        <img
-          src={post?.coverImage ? post?.coverImage : "/ComingSoon.png"}
-          alt={post?.title}
-        />
-      </a>
-      <div>
+      <div className="card-header">
+        <div className="card-dummy"></div>
+        <a
+          className="card-img"
+          style={{
+            backgroundImage: `url(${
+              post?.coverImage ? post?.coverImage : "/ComingSoon.png"
+            })`,
+          }}
+          href={`/${post.username}/${post.slug}`}
+        ></a>
+      </div>
+      <div className="card-body">
         <Link href={`/${post.username}/${post.slug}`}>
           <h2>
             <a>{post.title}</a>
@@ -39,13 +45,11 @@ function PostItem({ post, admin }) {
           </a>
         </Link>
       </div>
-      <footer>
-        <p>
-          {wordCount} words. {minutesToRead} min read
-        </p>
-        <br />
-        <span className="push-center">❤️ {post.heartCount || 0} Hearts</span>
-      </footer>
+      <p>
+        {wordCount} words. {minutesToRead} min read
+      </p>
+      <br />
+      <span className="push-center">❤️ {post.heartCount || 0} Hearts</span>
       {/* If admin view, show extra controls for user */}
       {admin && (
         <>

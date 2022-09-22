@@ -220,14 +220,55 @@ button.btn-logo {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.15rem;
+  padding-bottom: 1rem;
+  margin: 0.75rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
+  border-radius: 1rem;
+}
+
+.card h2 {
+  padding-top: 1rem;
+}
+
+.card-dummy {
+  margin-top: 100%;
+}
+
+.card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Card image */
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* center fit the background image */
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin: 0;
 }
 
 .card:hover {
@@ -242,7 +283,7 @@ button.btn-logo {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   padding: 0.25rem;
   margin: 0.25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -251,20 +292,6 @@ button.btn-logo {
 .static-card p {
   margin: 0;
   font-size: .75rem;
-}
-
-
-
-/* On small width screen card is full window width */
-@media only screen and (max-width: 600px) {
-  .card {
-    width: 100%;
-    flex-direction: column;
-  }
-  .card img {
-    width: 100%;
-    margin: 0;
-  }
 }
 
 .card h2 {
@@ -287,6 +314,7 @@ button.btn-logo {
   background: var(--color-blue);
 }
 
+
 /* Image thumbnails */
 /* thumbnail card */
 .thumbnail-card {
@@ -295,7 +323,7 @@ button.btn-logo {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding: 0.25rem;
   margin: 0.25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -308,8 +336,9 @@ button.btn-logo {
 }
 
 .thumbnail {
+  position: absolute;
+  /* height: 100%; */
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 0.25rem;
   max-width: 120px;
