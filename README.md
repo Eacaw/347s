@@ -9,7 +9,7 @@
 | Profile dashboard | :white_check_mark:
 | Create Recipe Page | :white_check_mark:
 | Add 'likes' feature | :white_check_mark:
-| Add footer | :orange_square:
+| Add footer | :white_check_mark:
 | Add search feature | :red_square:
 | Add 'delete' feature | :white_check_mark:
 | Add 'edit' feature | :white_check_mark:
