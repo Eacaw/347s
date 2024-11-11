@@ -10,7 +10,7 @@
 | Create Recipe Page | :white_check_mark:
 | Add 'likes' feature | :white_check_mark:
 | Add footer | :white_check_mark:
-| Add search feature | :red_square:
+| Add search feature | :white_check_mark:
 | Add 'delete' feature | :white_check_mark:
 | Add 'edit' feature | :white_check_mark:
-| Add Tags | :red_square:
+| Add Tags | :white_check_mark:
