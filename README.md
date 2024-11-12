@@ -13,4 +13,4 @@
 | Add search feature | :white_check_mark:
 | Add 'delete' feature | :white_check_mark:
 | Add 'edit' feature | :white_check_mark:
-| Add Tags | :white_check_mark:
+| Add Tags | 🟥:
