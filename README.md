@@ -12,5 +12,5 @@
 | Add footer | :white_check_mark:
 | Add search feature | :white_check_mark:
 | Add 'delete' feature | :white_check_mark:
-| Add 'edit' feature | ✅:
+| Add 'edit' feature | 🟥:
 | Add Tags | 🟥:
